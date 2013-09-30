@@ -1,0 +1,10 @@
+<a href="#edit_<%=@model.id%>" data-toggle="modal">修改
+  <i class="icon-edit"></i>
+</a>
+
+<span>
+  <%=link_to([@employee,@model],:method=>:delete,:class=>"delete_item",:remote=>true,:confirm =>"确定删除?") do %>
+  删除
+  <i class="icon-trash"></i>
+  <%end%>
+</span>

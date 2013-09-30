@@ -1,0 +1,41 @@
+<div>
+  <table class="table table-hover table-striped">
+    <tr>
+      <td>档案编号</td><td><%=@employee.profile_number%></td>
+    </tr>
+    <tr>
+      <td>姓名</td><td><%=@employee.name%></td>
+    </tr>
+    <tr>
+      <td>性别</td><td><%=@employee.gender%></td>
+    </tr>
+    <tr>
+      <td>出生日期</td><td><%=@employee.birthday%></td>
+    </tr>
+    <tr>
+      <td>民族</td><td><%=@employee.nation%></td>
+    </tr>
+    <tr>
+      <td>政治面貌</td><td><%=@employee.political_status%></td>
+    </tr>
+    <tr>
+      <td>婚姻状况</td><td><%=@employee.marriage_status%></td>
+    </tr>
+    <tr>
+      <td>身份证号</td><td><%=@employee.id_card_number%></td>
+    </tr>
+    <tr>
+      <td>银行考卡号</td><td><%=@employee.bank_card_number%></td>
+    </tr>
+    <tr>
+      <td>进入公司时间</td><td><%=@employee.join_company_date%></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+	<%= link_to "修改","#change_base",:role => "button",:class => "btn btn-primary",:data => {:toggle => "modal"}%>
+      </td>
+    </tr>
+  </table>
+</div>
+<%= render :partial =>"employees/edit",:locals => {:form =>"/employees/base_form"}%>
+

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  signed_date: 2013-09-15
+  deadline: 2013-09-15
+  number: MyString
+  type: 
+
+two:
+  signed_date: 2013-09-15
+  deadline: 2013-09-15
+  number: MyString
+  type: 

@@ -1,0 +1,13 @@
+<div id="new_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>新建员工教育经历</h3>
+  </div>
+  <div  class="modal-body">
+    <%=render :partial=>"educations/form",:locals=>{:education=>@education}%>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+    <button class="btn btn-primary" form="new_education">保存</button>
+  </div>
+</div>

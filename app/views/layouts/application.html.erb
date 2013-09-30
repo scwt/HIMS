@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HIMS</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">人事管理系统</a>
+      <ul class="nav">
+	<li><%= link_to "首页",employees_path %></li>
+	<li><%=link_to "新建员工",new_employee_path %></li>
+	<li><a href="#" data-toggle="tab">查询管理</a></li>
+	<li><a href="#">消息提示</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
+</html>

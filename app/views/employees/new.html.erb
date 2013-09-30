@@ -1,0 +1,90 @@
+<div class="container-fluid">
+  <%=form_for @employee, :html=>{:class => "form-horizontal"} do |f| %>
+  <div class="row-fluid">
+    <div class="span6">
+      <div style="float:right">
+	<!--姓名-->
+	<div class="control-group">
+	  <%= f.label "姓名",:class => "control-label" %>
+	  <div class="controls">
+	    <%= f.text_field :name %>
+	  </div>
+	</div>
+	<!--性别-->
+	<div class="control-group">
+	  <%= f.label "性别",:class => "control-label"  %>
+	  <div class="controls">
+	    <%= f.radio_button :gender,"男" %>男
+	    <%= f.radio_button :gender,"女" %>女
+	  </div>
+	</div>
+
+      <div class="control-group">
+	<%= f.label "省份证号",:class => "control-label" %>
+	<div class="controls">
+	  <%= f.text_field :id_card_number %>
+	</div>
+      </div>
+
+      <div class="control-group">
+	<%= f.label "政治面貌",:class => "control-label" %>
+	<div class="controls">
+	  <%= f.radio_button :political_status,"党员" %>党员
+	  <%= f.radio_button :political_status,"群众" %>群众
+	  <%= f.radio_button :political_status,"预备党员" %>预备党员
+	</div>
+      </div>
+
+      <div class="control-group">
+	<%= f.label "民族",:class => "control-label" %>
+	<div class="controls">
+	  <%= f.text_field :nation %>
+	</div>
+      </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div  style="float:left">
+	<!--出生日期-->
+	<div class="control-group">
+	  <%= f.label "出生日期",:class => "control-label" %>
+	  <div class="controls">
+	    <%= f.text_field :birthday %>
+	  </div>
+	</div>
+	<!--婚姻状况-->
+	<div class="control-group">
+	  <%= f.label "婚姻状况",:class => "control-label"  %>
+	  <div class="controls">
+	    <%= f.radio_button :marriage_status,"未婚" %>未婚
+	    <%= f.radio_button :marriage_status,"已婚" %>已婚
+	  </div>
+	</div>
+	<!--银行卡卡号-->
+	<div class="control-group">
+	  <%= f.label "银行卡卡号",:class => "control-label"  %>
+	  <div class="controls">
+	     <%= f.text_field :bank_card_number %>
+	  </div>
+	</div>
+	<!--进入如公司时间-->
+	<div class="control-group">
+	  <%= f.label "进入公司时间",:class => "control-label"  %>
+	  <div class="controls">
+	     <%= f.text_field :join_company_date %>
+	  </div>
+	</div>
+
+	<!--提交-->
+	<div class="control-group">
+	  <div class="controls">
+	    <%= f.submit "确定" ,:class =>"btn"%>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <% end %>
+ 
+</div>

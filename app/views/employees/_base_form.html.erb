@@ -1,0 +1,59 @@
+<%=form_for @employee,:html =>{:class=>"form-horizontal"} do |f|%>
+  <div class="control-group">
+    <%=f.label "姓名", :class=>"control-label"%>
+    <div class="controls">
+     <%=f.text_field :name%>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%=f.label "性别",:class=>"control-label"%>
+    <div class="controls">
+      <%=f.text_field :gender%>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "出生日期", :class=>"control-label"%>
+    <div class="controls">
+      <%=f.text_field :birthday%>
+    </div>
+  </div>
+
+ <div class="control-group">
+    <%=f.label "民族",:class=>"control-label"%>
+    <div class="controls">
+      <%=f.text_field :nation%>
+    </div>
+  </div>
+ <div class="control-group">
+    <%=f.label "政治面貌", :class=>"control-label"%>
+    <div class="controls">
+      <%=f.text_field :political_status%>
+    </div>
+  </div>
+ <div class="control-group">
+    <%=f.label "婚姻状况",:class=>"control-label"%>
+    <div class="controls">
+      <%=f.text_field :marriage_status%>
+    </div>
+  </div>
+
+ <div class="control-group">
+   <%=f.label "身份证号",:class=>"control-label"%>
+   <div class="controls">
+     <%=f.text_field :id_card_number%>
+   </div>
+ </div>
+ <div class="control-group">
+   <%=f.label "银行卡卡号", :class=>"control-label"%>
+   <div class="controls">
+     <%=f.text_field :bank_card_number%>
+   </div>
+ </div>
+ <div class="control-group">
+   <%=f.label "进入公司时间",:class=>"control-label"%>
+   <div class="controls">
+     <%=f.text_field :join_company_date%>
+   </div>
+ </div>
+<%end%>

@@ -1,0 +1,79 @@
+<% if flash[:notice] %>
+<div class="row alert">
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+
+  <%= flash[:notice]%>
+</div>
+<% end %>
+<div id="profile" class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+      <ul class="nav nav-tabs nav-stacked">
+	<li class="active">
+	  <a href="#base" data-toggle="tab">
+	    <i class="icon-chevron-right right"></i>常见信息</a>
+	</li>
+	<li>
+	  <a href="#educations" data-toggle="tab">
+	    <i class="icon-chevron-right right"></i>教育经历</a>
+	</li>
+	<li>
+	  <a href="#skill" data-toggle="tab">
+	    <i class="icon-chevron-right right"></i>职称信息</a>
+	</li>
+	<li>
+	  <a href="#certificates" data-toggle="tab">
+	    <i class="icon-chevron-right right"></i>能力证书</a>
+	</li>
+	<li>
+	  <a href="#train_records" data-toggle="tab">
+	    <i class="icon-chevron-right right"></i>培训记录</a>
+	</li>
+	<li>
+	  <a href="#task" data-toggle="tab">
+	    <i class="icon-chevron-right right"></i>承担工程</a>
+	</li>
+	<li>
+	  <a href="#wage_records" data-toggle="tab">
+	    <i class="icon-chevron-right right"></i>工资信息</a>
+	</li>
+	<li>
+	  <a href="#contracts" data-toggle="tab">
+	    <i class="icon-chevron-right right"></i>合同</a>
+	</li>
+
+      </ul>
+    </div>
+    <div class="span9">
+      <div class="tab-content">
+	<!--profile 开始-->
+	<section id="base" class="tab-pane active">
+	  <%= render "profile/base"%>
+	</section>
+	<section id="educations" class="tab-pane">
+	 <%= render "profile/educations"%>
+	</section>
+	<section id="skill" class="tab-pane">
+	  <%= render "profile/skill"%>
+	</section>
+	<section id="certificates" class="tab-pane">
+	   <%= render "profile/certificates"%>
+	</section>
+	<section id="train_records" class="tab-pane">
+	  <%= render "profile/train_records"%>
+	</section>
+	<section id="task" class="tab-pane">
+	   <%= render "profile/work_records"%>
+	</section>
+	<section id="wage_records" class="tab-pane">
+	  <%= render "profile/wage_records"%>
+	</section>
+	<section id="contracts" class="tab-pane">
+	  <%= render "profile/contracts"%>
+	</section>
+	<!--profile 结束-->
+      </div>
+  
+    </div>
+  </div>
+</div>

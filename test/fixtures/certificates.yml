@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  number: MyString
+  award_date: 2013-08-26
+  type: 
+  leavel: MyString
+
+two:
+  number: MyString
+  award_date: 2013-08-26
+  type: 
+  leavel: MyString

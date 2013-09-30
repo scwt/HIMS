@@ -1,0 +1,46 @@
+<%=form_for([@employee,education],:remote=> true,:html => {:class => "form-horizontal"}) do |f| %>
+
+  <div class="control-group">
+    <%=f.label "起止时间", :class=>"control-label" %>
+    <div class="controls">
+      <%=f.text_field  :start_end_time %>
+    </div>
+  </div>
+
+   <div class="control-group">
+    <%=f.label "毕业院校", :class=>"control-label" %>
+    <div class="controls">
+      <%=f.text_field :school%>
+    </div>
+  </div>
+
+ <div class="control-group">
+    <%=f.label "学历",:class=>"control-label" %>
+    <div class="controls">
+      <%=f.text_field :diploma%>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%=f.label "专业", :class=>"control-label" %>
+    <div class="controls">
+      <%=f.text_field :major%>
+    </div>
+  </div>
+ <div class="control-group">
+    <%=f.label "学位",:class=>"control-label" %>
+    <div class="controls">
+      <%=f.text_field :degree%>
+    </div>
+ </div>
+  <div class="control-group">
+    <%=f.label "最高学历?", :class=>"control-label" %>
+    <div class="controls">
+      <select>
+	<option name="education[highest]" value="no">否
+	<option name="education[highest]" value="yes">是
+      </select>
+    </div>
+ </div>
+
+<%end%>

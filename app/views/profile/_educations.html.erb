@@ -1,0 +1,25 @@
+<table class="table">
+  <tr>
+    <th>起止时间</th><th>毕业院校</th><th>学历</th> <th>专业</th> <th>学位</th>
+    <th colspan="2">操作</th>
+  </tr>
+  <% for education in @employee.educations %>
+  <% if not education.new_record? %>
+  <tr>
+    <td><%=education.start_end_time%></td>
+    <td><%=education.school%></td>
+    <td><%=education.diploma%></td>
+    <td><%=education.major%></td>
+    <td><%=education.degree%></td>
+    <td><%=render_cell :common,:operation,:module => [education,"education",@employee]%></td>
+  </tr>
+  <% end %>
+  <% end %>
+</table>
+
+<!--添加-->
+<button class="btn btn-primary" data-toggle="modal" data-target="#new_modal">添加</button>
+<!--新建员工模态对话框-->
+<%=render "educations/new"%>
+
+<%=render "educations/edit"%>

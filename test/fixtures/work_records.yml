@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_date: 2013-09-13
+  end_date: 2013-09-13
+  project_name: MyString
+  project_scale: MyString
+  position: MyString
+  profession: MyString
+
+two:
+  start_date: 2013-09-13
+  end_date: 2013-09-13
+  project_name: MyString
+  project_scale: MyString
+  position: MyString
+  profession: MyString
