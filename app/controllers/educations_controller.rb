@@ -4,13 +4,14 @@ class EducationsController < ApplicationController
   def create
     @employee = Employee.find(params[:employee_id])
     @education = @employee.educations.build(params[:education])
-   
-    if @education.save
-      render json: {status: 200}
-    else 
-      render json: {errors: @education.errors, status: 500}
-    end 
     
+    respond_to do |f|
+      if @education.save
+        f.json {render json: "success"}
+      else 
+        f.json {render :errors=>@education.errors}
+      end 
+    end 
   end 
   
   def update
@@ -18,9 +19,9 @@ class EducationsController < ApplicationController
     
     respond_to do |format|
       if @education.update_attributes(params[:education])
-       render json: {status: 'ok'}
+        format.js {render json: {status: 'ok'}}
       else
-        render json: {errors: @education.errors}, status: 500
+        format.js {render json: {errors: @education.errors}, status: 500}
       end
     end 
   end 
@@ -30,8 +31,7 @@ class EducationsController < ApplicationController
     @education = Education.find(params[:id])
     @education.destroy
 
-  
-    render json: {status: 200}
-     
+   
+    render json: {status: 200}  
   end 
 end

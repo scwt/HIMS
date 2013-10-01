@@ -6,7 +6,7 @@ class Employee < ActiveRecord::Base
   validates :name ,:gender,:presence => true
   #one-to-one association
   has_one  :household, :dependent => :destroy
-  has_one :skill, :dependent => :destroy
+  #has_one :skill, :dependent => :destroy
   #one-to-many association
   has_many :certificates,:dependent => :destroy
   has_many :educations, :dependent => :destroy

@@ -1,18 +1,15 @@
 $ ->
-  ## 新建record
-  $('form[id^="new_"]').on "ajax:success", (evt, data, status, xhr)->
-   
-    $id = $(this).closest('section').attr('id')
-    window.location.reload()
-    #baseUrl = window.location.pathname
- 
-    #window.location.reload
+  $("a.delete_item").on "ajax:success",(e,data,status,xhr) ->
   
-  ## 编辑record
+    section_id=$(this).closest('section').attr('id')
+    nav_id = "#"+section_id
+   
+    $.cookie('current_tab',nav_id)
+   
+    window.location.reload()
 
-  ## 删除
-  $('.delete_item').on "ajax:success", (evt, data, status, xhr) ->
-
-    section_id = $(this).closest('section').attr('id')
-    
-    
+   
+  if $.cookie("current_tab")
+    nav_id=$.cookie('current_tab')
+    $('#tab a[href='+nav_id+']').tab('show')
+    $.cookie('current_tab',null)
