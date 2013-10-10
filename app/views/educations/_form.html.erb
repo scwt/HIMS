@@ -36,10 +36,7 @@
   <div class="control-group">
     <%=f.label "最高学历?", :class=>"control-label" %>
     <div class="controls">
-      <select>
-	<option name="education[highest]" value="no">否
-	<option name="education[highest]" value="yes">是
-      </select>
+      <%=f.select :highest,options_for_select([["否","no"],["是","yes"]],:selected=>education.highest)%>
     </div>
  </div>
 
