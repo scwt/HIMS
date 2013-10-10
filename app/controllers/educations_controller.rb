@@ -7,9 +7,9 @@ class EducationsController < ApplicationController
     
     respond_to do |f|
       if @education.save
-        f.json {render json: "success"}
+        f.json {render json: {status: 200} }
       else 
-        f.json {render :errors=>@education.errors}
+        f.json {render json: {:errors=>@education.errors},status: 500 }
       end 
     end 
   end 
@@ -19,9 +19,9 @@ class EducationsController < ApplicationController
     
     respond_to do |format|
       if @education.update_attributes(params[:education])
-        format.js {render json: {status: 'ok'}}
+        format.json {render json: {status: 'ok'}}
       else
-        format.js {render json: {errors: @education.errors}, status: 500}
+        format.json {render json: {errors: @education.errors}, status: 500}
       end
     end 
   end 

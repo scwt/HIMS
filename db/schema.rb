@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20130915103438) do
   create_table "educations", :force => true do |t|
     t.string   "start_end_time"
     t.string   "school"
-    t.boolean  "highest"
+    t.string  "highest"
     t.string   "diploma"
     t.string   "major"
     t.string   "degree"

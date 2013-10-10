@@ -3,7 +3,7 @@ class CreateEducations < ActiveRecord::Migration
     create_table :educations do |t|
       t.string :start_end_time
       t.string :school
-      t.boolean :highest
+      t.string :highest
       t.string :diploma
       t.string :major
       t.string :degree
